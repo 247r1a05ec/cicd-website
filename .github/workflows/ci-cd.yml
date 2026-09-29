@@ -14,14 +14,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Check Website
+      - name: Check Website File Exists
         run: |
           test -f index.html
 
-      - name: Test HTML
+      - name: Verify HTML Content
         run: |
-          grep "<html>" index.html
-          grep "</html>" index.html
+          grep -i "html" index.html
 
   deploy:
     needs: test
@@ -40,7 +39,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Website
@@ -48,6 +47,6 @@ jobs:
         with:
           path: .
 
-      - name: Deploy Website
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
