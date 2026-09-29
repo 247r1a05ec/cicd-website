@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green-light: #2ea043;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: var(--bg); color: var(--text-primary); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { width: 100%; max-width: 820px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        nav { display: flex; gap: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 25px; }
+        nav a { color: var(--accent-blue); text-decoration: none; font-size: 14px; font-weight: 500; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 26px; margin-bottom: 20px; }
+        .tech-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
+        .tech-box { background: rgba(13, 17, 23, 0.6); border: 1px solid var(--border); padding: 14px; border-radius: 6px; }
+        .tech-box strong { color: var(--accent-green-light); font-size: 14px; display: block; margin-bottom: 4px; }
+        .tech-box span { font-size: 13px; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="about.html">About</a>
+            <a href="pipeline.html">Pipeline Flow</a>
+            <a href="team.html" style="font-weight: 700; color: var(--text-primary);">Project Details</a>
+        </nav>
+
+        <h1>DevOps Mini Project Details</h1>
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+            This project illustrates core DevOps principles by automating the software build, verification, and deployment lifecycle.
+        </p>
+
+        <h2 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);">Key Specifications</h2>
+        <div class="tech-list">
+            <div class="tech-box">
+                <strong>Project Type</strong>
+                <span>CI/CD Pipeline</span>
+            </div>
+            <div class="tech-box">
+                <strong>Platform</strong>
+                <span>GitHub Actions</span>
+            </div>
+            <div class="tech-box">
+                <strong>Deployment Target</strong>
+                <span>GitHub Pages</span>
+            </div>
+            <div class="tech-box">
+                <strong>Dependencies</strong>
+                <span>Zero Local Setup</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
