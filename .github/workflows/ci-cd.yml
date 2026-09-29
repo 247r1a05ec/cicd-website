@@ -14,13 +14,17 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Check Website File Exists
+      # --- ADD YOUR LINES RIGHT HERE ---
+      - name: Check Website Files Exist
         run: |
           test -f index.html
+          test -f about.html
 
-      - name: Validate File Not Empty
+      - name: Validate Files Not Empty
         run: |
           [ -s index.html ]
+          [ -s about.html ]
+      # ---------------------------------
 
   deploy:
     needs: test
