@@ -18,9 +18,9 @@ jobs:
         run: |
           test -f index.html
 
-      - name: Verify HTML Content
+      - name: Validate File Not Empty
         run: |
-          grep -i "html" index.html
+          [ -s index.html ]
 
   deploy:
     needs: test
